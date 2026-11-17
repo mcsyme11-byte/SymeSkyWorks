@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-17 · Published, and repo filled in
+
+### Added
+- Site published on GitHub Pages: https://mcsyme11-byte.github.io/SymeSkyWorks/
+- `404.html` "Off the flight plan" page, `robots.txt`, `sitemap.xml`, `.nojekyll`.
+- Canonical link, full share-image address and business details for search engines.
+- Professional `README.md` with screenshots, `LICENSE` (all rights reserved) and `CLAUDE.md` repo rules.
+
+### Changed
+- Founding year 2023 confirmed by Malcolm.
+
 ## 2026-11-17 · Website v2 and new logo
 
 ### Added

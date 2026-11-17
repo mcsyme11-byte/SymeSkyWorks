@@ -32,7 +32,7 @@ Website copies (generated from the files above) are in `assets/icons/` and `asse
 
 1. **Outlined SVG for print and icons.** The ring text needs converting to outlines using the real Georgia font (available on Windows), for example in Inkscape: *Path ▸ Object to Path*. Until then, use the PNG.
 2. **Trademark check.** The patch layout (rings, stitching, text, stars) is original. The drone centre symbol is not on the portfolio's list of symbols that follow Lucide icon shapes, but before any trademark filing, have a trademark professional confirm the centre symbol is original and distinctive, and redraw it if needed.
-3. **Year.** The patch says 2023 (the founding year, matching the portfolio). The old website said "Est. 2024"; the new site uses 2023.
+3. ~~**Year.**~~ Done: 2023 confirmed by Malcolm on November 17, 2026 (the old site said "Est. 2024").
 
 ---
 © 2026 Malcolm Syme · mcsyme11@gmail.com
