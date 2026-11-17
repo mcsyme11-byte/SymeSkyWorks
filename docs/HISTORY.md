@@ -1,0 +1,23 @@
+# Syme Skyworks · history
+
+## 2020–2023 · The idea and the company
+First ideas in 2020. Syme Skyworks was founded in 2023 by Malcolm Syme, offering drone inspections, aerial surveys and photography with a DJI Air 3S, alongside hands-on construction support in Canmore and the 3 Sisters area.
+
+## First website
+A single-page site in navy and bright blue with Bebas Neue headings, an animated drone, aurora and star effects, and a custom cursor. The logo was the text "SYME SKYWORKS" with "SKY" in blue. All twelve photos were embedded inside the one HTML file (about 4.2 MB).
+
+## November 17, 2026 · Mission patch added
+A mission patch for Syme Skyworks was made in the portfolio project and added to `brand/patch/` (SVG and 1024 px PNG).
+
+## November 17, 2026 · Patch adopted as the main logo; site redesigned
+- The mission patch became the main logo, replacing the text logo.
+- A simplified mark without ring text was made for sizes under 64 px, plus a favicon version with an enlarged drone for under 32 px.
+- The site was redesigned in the shared "old money" look (navy, brass and cream, Georgia serif) used across Malcolm Syme's projects.
+- Photos moved out of the HTML into image files with 720 px thumbnails (four duplicates removed), and a gallery viewer was added.
+- Sections reordered so Contact comes last; FAQ uses native expandable questions.
+- Street address removed from the public site; phone number added.
+- "Est. 2024" corrected to 2023 to match the patch and portfolio.
+- README, design guide, changelog and brand notes added.
+
+---
+© 2026 Malcolm Syme · mcsyme11@gmail.com
