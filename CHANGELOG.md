@@ -1,4 +1,15 @@
+<p align="center"><img src="brand/patch/syme-skyworks-patch.png" width="110" alt="Syme Skyworks mission patch"></p>
+
 # Changelog
+
+## 2026-11-20 · Branding and copyright on every file
+
+### Added
+- Mission patch at the top, and the standard © and trademark footer at the bottom, of every document (changelog, design guide, history, repo rules, logo guide, hand-off).
+- Copyright written into the file details of every photo, icon and screenshot (36 images; pictures unchanged).
+- Visible © and trademark line on the 404 page.
+- Credit in `robots.txt`, `sitemap.xml` and `site.webmanifest`.
+- `brand/social-preview.png`: branded 1280 × 640 card for GitHub link previews.
 
 ## 2026-11-17 · Published, and repo filled in
 
@@ -37,4 +48,9 @@
 The contact form endpoint (Formspree) is unchanged.
 
 ---
-© 2026 Malcolm Syme · mcsyme11@gmail.com
+
+<p align="center">
+  <img src="brand/mark/syme-skyworks-mark.svg" width="36" alt="Syme Skyworks mark"><br>
+  <sub>© 2026 Malcolm Syme · mcsyme11@gmail.com · All rights reserved.<br>
+  Syme Skyworks™ and the Syme Skyworks mission patch are trademarks of Malcolm Syme.</sub>
+</p>

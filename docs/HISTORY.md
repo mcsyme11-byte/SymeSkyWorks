@@ -1,3 +1,5 @@
+<p align="center"><img src="../brand/patch/syme-skyworks-patch.png" width="110" alt="Syme Skyworks mission patch"></p>
+
 # Syme Skyworks · history
 
 ## 2020–2023 · The idea and the company
@@ -20,4 +22,9 @@ A mission patch for Syme Skyworks was made in the portfolio project and added to
 - README, design guide, changelog and brand notes added.
 
 ---
-© 2026 Malcolm Syme · mcsyme11@gmail.com
+
+<p align="center">
+  <img src="../brand/mark/syme-skyworks-mark.svg" width="36" alt="Syme Skyworks mark"><br>
+  <sub>© 2026 Malcolm Syme · mcsyme11@gmail.com · All rights reserved.<br>
+  Syme Skyworks™ and the Syme Skyworks mission patch are trademarks of Malcolm Syme.</sub>
+</p>

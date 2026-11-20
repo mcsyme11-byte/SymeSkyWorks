@@ -1,3 +1,5 @@
+<p align="center"><img src="../brand/patch/syme-skyworks-patch.png" width="110" alt="Syme Skyworks mission patch"></p>
+
 # Syme Skyworks design guide
 
 Syme Skyworks follows the shared "old money" look used across Malcolm Syme's projects (the portfolio, Flight Deck Suite, Hot Mic and NASA Data Projects): navy, brass and cream, serif type, thin brass rules, kept modern.
@@ -69,4 +71,9 @@ Every page, document and app carries:
 The site is public: no street address. Contact details are name, email, phone and service area only.
 
 ---
-© 2026 Malcolm Syme · mcsyme11@gmail.com
+
+<p align="center">
+  <img src="../brand/mark/syme-skyworks-mark.svg" width="36" alt="Syme Skyworks mark"><br>
+  <sub>© 2026 Malcolm Syme · mcsyme11@gmail.com · All rights reserved.<br>
+  Syme Skyworks™ and the Syme Skyworks mission patch are trademarks of Malcolm Syme.</sub>
+</p>

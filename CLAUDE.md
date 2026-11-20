@@ -1,3 +1,5 @@
+<p align="center"><img src="brand/patch/syme-skyworks-patch.png" width="110" alt="Syme Skyworks mission patch"></p>
+
 # Instructions for Claude working in this repository
 
 This is the public website of **Syme Skyworks**, Malcolm Syme's drone services and construction support business in Canmore, Alberta. It is published by GitHub Pages from `main` at https://mcsyme11-byte.github.io/SymeSkyWorks/.
@@ -16,3 +18,11 @@ This is the public website of **Syme Skyworks**, Malcolm Syme's drone services a
 - **Other chats own other repos.** The portfolio (`mcsyme11-byte.github.io`) belongs to the portfolio chat; write a hand-off in `docs/handoffs/` instead of changing it from here.
 - When Malcolm asks a question, answer it only; change nothing until he says go.
 - Before calling a change done, check it at desktop and phone widths and look for console errors.
+
+---
+
+<p align="center">
+  <img src="brand/mark/syme-skyworks-mark.svg" width="36" alt="Syme Skyworks mark"><br>
+  <sub>© 2026 Malcolm Syme · mcsyme11@gmail.com · All rights reserved.<br>
+  Syme Skyworks™ and the Syme Skyworks mission patch are trademarks of Malcolm Syme.</sub>
+</p>

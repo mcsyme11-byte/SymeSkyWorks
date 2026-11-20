@@ -1,3 +1,5 @@
+<p align="center"><img src="../brand/patch/syme-skyworks-patch.png" width="110" alt="Syme Skyworks mission patch"></p>
+
 # Syme Skyworks logo
 
 The mission patch is the main Syme Skyworks logo. It replaces the earlier text logo ("SYME **SKY**WORKS" in Bebas Neue with "SKY" in blue).
@@ -10,6 +12,7 @@ The mission patch is the main Syme Skyworks logo. It replaces the earlier text l
 | `patch/syme-skyworks-patch.png` | The full patch, 1024 × 1024 px, transparent background. **Use this for print and documents** until an outlined SVG exists. |
 | `mark/syme-skyworks-mark.svg` / `.png` | The patch without ring text (rings, stitching and drone). For 32–64 px, and anywhere the ring text would be too small to read. |
 | `mark/syme-skyworks-mark-small.svg` | Simplified mark for favicons and icons under 32 px: brass ring and an enlarged drone, no inner ring or stitching. |
+| `social-preview.png` | 1280 × 640 px card for GitHub's social preview (repo *Settings ▸ General ▸ Social preview*) and other link previews. |
 
 Website copies (generated from the files above) are in `assets/icons/` and `assets/img/patch-560.png`.
 
@@ -23,6 +26,8 @@ Website copies (generated from the files above) are in `assets/icons/` and `asse
 
 ## Rules
 
+- Every photo, icon and screenshot in this repo carries the copyright in its file details (EXIF for JPEG, text fields for PNG): *Copyright (c) 2026 Malcolm Syme, mcsyme11@gmail.com. All rights reserved.* Add the same to any new image.
+
 - Never stretch, recolour, rotate or add effects other than a soft drop shadow on dark backgrounds.
 - Leave clear space around the patch of at least 10 % of its width.
 - Place it on navy or dark backgrounds. On white, use the PNG (the patch has its own dark fill).
@@ -35,4 +40,9 @@ Website copies (generated from the files above) are in `assets/icons/` and `asse
 3. ~~**Year.**~~ Done: 2023 confirmed by Malcolm on November 17, 2026 (the old site said "Est. 2024").
 
 ---
-© 2026 Malcolm Syme · mcsyme11@gmail.com
+
+<p align="center">
+  <img src="../brand/mark/syme-skyworks-mark.svg" width="36" alt="Syme Skyworks mark"><br>
+  <sub>© 2026 Malcolm Syme · mcsyme11@gmail.com · All rights reserved.<br>
+  Syme Skyworks™ and the Syme Skyworks mission patch are trademarks of Malcolm Syme.</sub>
+</p>

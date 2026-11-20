@@ -1,3 +1,6 @@
+# Syme Skyworks · © 2026 Malcolm Syme · mcsyme11@gmail.com
+# Syme Skyworks™ and the Syme Skyworks mission patch are trademarks of Malcolm Syme.
+
 User-agent: *
 Allow: /
 
