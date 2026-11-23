@@ -14,6 +14,7 @@
   --ease: cubic-bezier(.2,.7,.2,1);
 }
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 body {
   margin: 0; font-family: var(--font); font-size: 17px; line-height: 1.65; color: var(--ink);
@@ -30,10 +31,10 @@ a:hover { color: var(--ink); }
 /* ── Top bar ── */
 .topbar { position: sticky; top: 0; z-index: 100; background: rgba(15,21,32,.96); border-bottom: 1px solid rgba(192,160,98,.14); }
 .bar { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.brand { display: flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-size: 18px; letter-spacing: .05em; }
+.brand { display: flex; align-items: center; gap: 11px; white-space: nowrap; flex-shrink: 0; color: var(--ink); text-decoration: none; font-size: 18px; letter-spacing: .05em; }
 .brand img { width: 34px; height: 34px; }
-.nav { display: flex; gap: 26px; align-items: center; }
-.nav a { color: var(--ink2); text-decoration: none; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; position: relative; padding: 4px 0; transition: color .2s; }
+.nav { display: flex; gap: 22px; align-items: center; }
+.nav a { white-space: nowrap; color: var(--ink2); text-decoration: none; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; position: relative; padding: 4px 0; transition: color .2s; }
 .nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: var(--brass); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
 .nav a:hover { color: var(--ink); }
 .nav a:hover::after { transform: scaleX(1); }
@@ -198,6 +199,60 @@ footer { background: var(--deep); border-top: 1px solid rgba(192,160,98,.18); pa
   color: var(--faint); font-size: 13px; }
 .legal a { color: var(--muted); }
 
+/* ── Seasonal services: snow shoveling and landscaping ── */
+.tabs { display: inline-flex; gap: 4px; padding: 4px; margin-bottom: 30px; background: var(--deep); border: 1px solid var(--line2); border-radius: 999px; }
+.tabs button { font: 13px/1 var(--font); letter-spacing: .16em; text-transform: uppercase; color: var(--ink2); background: none; border: 0;
+  padding: 12px 20px; border-radius: 999px; cursor: pointer; transition: color .2s, background-color .2s; }
+.tabs button:hover { color: var(--ink); }
+.tabs button[aria-selected="true"] { background: var(--brass); color: #141B26; }
+.season-split { align-items: start; }
+.season-price { margin: 0 0 6px !important; font-size: 38px; color: var(--brass-bright) !important; line-height: 1.1; }
+.season-price small { font-size: 15px; color: var(--muted); }
+.ticks.ticks-1 { grid-template-columns: 1fr; margin-top: 24px; }
+.area { margin: 0; }
+.area-map { width: 100%; aspect-ratio: 4 / 3; border-radius: var(--r); border: 1px solid var(--line2); background: var(--deep); overflow: hidden; }
+.area figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; }
+.area-map .leaflet-control-attribution { background: rgba(12,17,25,.8); color: var(--muted); font-family: var(--font); }
+.area-map .leaflet-control-attribution a { color: var(--ink2); }
+.area-map .leaflet-bar a { background: var(--card); color: var(--ink); border-color: var(--line2); }
+.season-form { margin-top: 44px; }
+.season-form h3 { margin-bottom: 4px; }
+.row-addr { grid-template-columns: 1fr 2fr; }
+.checks { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.checks legend { font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; padding: 0; }
+.checks label { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; letter-spacing: normal; text-transform: none; color: var(--ink); cursor: pointer; }
+.checks input { width: 18px; height: 18px; accent-color: var(--brass); }
+.form-note { margin: 0; text-align: center; color: var(--muted); font-size: 14px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.pricing-season { margin-top: 18px; }
+.price-sm { padding: 24px 26px; }
+.price-sm .amount { font-size: 30px; }
+
+/* Seasonal pop-up (bottom corner, not blocking the page) */
+.season-pop { position: fixed; right: 20px; bottom: 20px; z-index: 200; width: min(380px, calc(100vw - 32px));
+  display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 20px 22px 22px; background: var(--card);
+  border: 1px solid var(--brass-dim); border-radius: var(--r); box-shadow: 0 18px 50px rgba(0,0,0,.45);
+  transform: translateY(16px); opacity: 0; transition: transform .45s var(--ease), opacity .45s var(--ease); }
+.season-pop[hidden] { display: none; }
+.season-pop.show { transform: none; opacity: 1; }
+.season-pop .eyebrow { margin-bottom: 6px; font-size: 11px; }
+.season-pop h3 { font-size: 20px; margin-right: 18px; }
+.season-pop p#popText { margin: 8px 0 16px; color: var(--ink2); font-size: 15px; }
+.season-pop .btn { min-height: 40px; padding: 0 20px; font-size: 12px; }
+.pop-close { position: absolute; top: 8px; right: 10px; width: 36px; height: 36px; border: 0; background: none; color: var(--muted);
+  font-size: 26px; line-height: 1; cursor: pointer; border-radius: 50%; }
+.pop-close:hover { color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .season-pop { transition: none; } }
+@media (max-width: 760px) {
+  .grid-2, .row-addr { grid-template-columns: 1fr; }
+  .tabs { display: flex; }
+  .tabs button { flex: 1; padding: 12px 10px; letter-spacing: .1em; }
+  .season-pop { right: 12px; left: 12px; bottom: 12px; width: auto; grid-template-columns: 1fr; padding: 16px 18px 18px; }
+  .season-pop img { display: none; }
+  .season-pop h3 { font-size: 18px; }
+  .season-pop p#popText { font-size: 14px; margin: 6px 0 12px; }
+}
+
 /* Reveal (opacity and transform only) */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .reveal.in { opacity: 1; transform: none; }
@@ -216,7 +271,7 @@ footer { background: var(--deep); border-top: 1px solid rgba(192,160,98,.18); pa
   .pricing.grid-3 { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; gap: 28px; }
 }
 /* ── Phone ── */
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
   .nav { position: fixed; top: 64px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gutter) 20px;
     background: var(--bg2); border-bottom: 1px solid var(--line); transform: translateY(-120%); transition: transform .3s var(--ease); visibility: hidden; }
   .nav.open { transform: none; visibility: visible; }
@@ -224,6 +279,8 @@ footer { background: var(--deep); border-top: 1px solid rgba(192,160,98,.18); pa
   .nav a::after { display: none; }
   .nav a.nav-cta { margin-top: 14px; text-align: center; border-bottom: 1px solid var(--brass-dim); }
   .menu-btn { display: block; }
+}
+@media (max-width: 760px) {
   .facts ul { grid-template-columns: 1fr 1fr; }
   .facts li:nth-child(3) { border-left: 0; }
   .facts li:nth-child(n+3) { border-top: 1px solid var(--line); }

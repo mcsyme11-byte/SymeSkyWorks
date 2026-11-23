@@ -8,7 +8,9 @@ This is the public website of **Syme Skyworks**, Malcolm Syme's drone services a
 
 - **This site is public.** No street address, school, age, PC names or file paths. Contact details are limited to: Malcolm Syme, mcsyme11@gmail.com, +1 (403) 679-1495, and the service area (Canmore, the 3 Sisters area and the Bow Valley).
 - **Credit and trademark lines stay on everything** (site footer, README, docs, brand files): "© Malcolm Syme · mcsyme11@gmail.com" and "Syme Skyworks™ and the Syme Skyworks mission patch are trademarks of Malcolm Syme."
-- **Facts:** founded in 2023 (confirmed by Malcolm). DJI Air 3S; 2+ years of flight experience. Only state facts Malcolm has confirmed; never invent clients, reviews or achievements.
+- **Facts:** founded in 2023 (confirmed by Malcolm). DJI Air 3S; 2+ years of flight experience. Snow shoveling: driveways from $16 per visit (depends on driveway and client), after snowfalls of 2 cm or more (depends on client and location), free quotes. Landscaping: free quotes.
+- **Neighbourhood services area:** a 520 m ring on the map, centred on Malcolm's neighbourhood at his request. Never add a pin, marker or street address for his house. Streets: Charles Carey, McNeill Dr, Morris, Prospect Ct, Prospect Heights, Prospect Ln, Prospect Rise, Van Horne Ln, Walker Rd.
+- **Seasonal pop-up:** snow shoveling November–March, landscaping April–October, shown once per visitor per season (add `?nopopup` to a link to suppress it). Only state facts Malcolm has confirmed; never invent clients, reviews or achievements.
 - **Look:** follow `docs/DESIGN.md` (the shared navy, brass and cream "old money" design). Big visual changes start as a preview Malcolm approves.
 - **Logo:** the mission patch is the main logo. Follow `brand/README.md` for which version to use at which size.
 - **Performance:** animate only `transform` and `opacity`; no `backdrop-filter`, custom cursors or per-frame scroll handlers.

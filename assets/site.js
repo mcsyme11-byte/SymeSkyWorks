@@ -48,3 +48,114 @@
   document.getElementById("lightboxClose").addEventListener("click", function () { box.close(); });
   box.addEventListener("click", function (e) { if (e.target === box) box.close(); });
 })();
+
+/* Seasonal services: tabs, service-area map, sign-up form and seasonal pop-up.
+ * Winter (November to March) features snow shoveling; April to October features landscaping.
+ * © 2026 Malcolm Syme · mcsyme11@gmail.com
+ */
+(function () {
+  "use strict";
+  var now = new Date(), m = now.getMonth(), y = now.getFullYear();
+  var winter = m >= 10 || m <= 2;
+  var season = winter ? "snow" : "yard";
+  var winterLabel = (m >= 10 ? y : y - 1) + "–" + String((m >= 10 ? y + 1 : y)).slice(-2);
+  var nextYardYear = m >= 10 ? y + 1 : y;
+  var nextWinter = (m <= 2 ? y : y) + "–" + String(y + 1).slice(-2);
+
+  // Wording that depends on the time of year
+  function setText(sel, txt) { var el = document.querySelector(sel); if (el) el.textContent = txt; }
+  if (winter) {
+    setText(".js-snow-preseason", "Sign up any time this winter, or reserve your spot for next winter.");
+    setText(".js-yard-preseason", "Pre-register now for the " + nextYardYear + " season and you are first on the list when it opens.");
+  } else {
+    setText(".js-snow-preseason", "Pre-register now for winter " + nextWinter + " and your driveway is on the list before the first snow.");
+    setText(".js-yard-preseason", "Sign up any time this season, or reserve your spot for next year.");
+  }
+
+  // Tabs
+  var tabs = { snow: document.getElementById("tab-snow"), yard: document.getElementById("tab-yard") };
+  var panels = { snow: document.getElementById("panel-snow"), yard: document.getElementById("panel-yard") };
+  var service = document.getElementById("seasonService");
+  var timing = document.getElementById("seasonTiming");
+  var subject = document.getElementById("seasonSubject");
+  function show(which, fromForm) {
+    ["snow", "yard"].forEach(function (k) {
+      var on = k === which;
+      tabs[k].setAttribute("aria-selected", on ? "true" : "false");
+      tabs[k].tabIndex = on ? 0 : -1;
+      panels[k].hidden = !on;
+    });
+    if (!fromForm && service) { service.value = which === "snow" ? "Snow shoveling" : "Landscaping"; syncForm(); }
+  }
+  if (!tabs.snow) return;
+  tabs.snow.addEventListener("click", function () { show("snow"); });
+  tabs.yard.addEventListener("click", function () { show("yard"); });
+  [tabs.snow, tabs.yard].forEach(function (t) {
+    t.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        var next = t === tabs.snow ? "yard" : "snow"; show(next); tabs[next].focus();
+      }
+    });
+  });
+
+  // Form: show only the fields for the chosen service, and pick sensible timing
+  function syncForm() {
+    var v = service.value;
+    var wantSnow = v === "Snow shoveling" || v === "Both";
+    var wantYard = v === "Landscaping" || v === "Both";
+    document.querySelectorAll('[data-for="snow"]').forEach(function (el) { el.hidden = !wantSnow; });
+    document.querySelectorAll('[data-for="yard"]').forEach(function (el) { el.hidden = !wantYard; });
+    var inSeason = (v === "Snow shoveling" && winter) || (v === "Landscaping" && !winter);
+    if (v !== "Both") timing.value = inSeason ? "Start this season" : "Pre-register for next season";
+    subject.value = v + " sign-up (" + timing.value.toLowerCase() + ") from Syme Skyworks website";
+  }
+  service.addEventListener("change", function () {
+    syncForm();
+    if (service.value !== "Both") show(service.value === "Snow shoveling" ? "snow" : "yard", true);
+  });
+  timing.addEventListener("change", syncForm);
+  show(season);
+
+  // Service-area map: a ring around the neighbourhood (no pin), loaded when it scrolls into view
+  var mapEl = document.getElementById("areaMap");
+  var mapMade = false;
+  function makeMap() {
+    if (mapMade) return; mapMade = true;
+    if (!window.L) { mapEl.innerHTML = '<p style="padding:24px;color:#98A0AB">The map could not load. The service area is Charles Carey, McNeill Dr, Prospect, Morris, Van Horne Ln and Walker Rd in Canmore.</p>'; return; }
+    var centre = [51.0739771, -115.3630219];
+    var map = L.map(mapEl, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
+    map.fitBounds(L.latLng(centre).toBounds(1040), { padding: [14, 14] });
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+      maxZoom: 19, subdomains: "abcd",
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+    L.circle(centre, { radius: 520, color: "#C0A062", weight: 2, dashArray: "6 6", fillColor: "#C0A062", fillOpacity: 0.12, interactive: false }).addTo(map);
+  }
+  if ("IntersectionObserver" in window) {
+    var mo = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { makeMap(); mo.disconnect(); } }, { rootMargin: "300px" });
+    mo.observe(mapEl);
+  } else { window.addEventListener("load", makeMap); }
+
+  // Seasonal pop-up: once per visitor per season, a few seconds after the page opens
+  var pop = document.getElementById("seasonPop");
+  var key = "ssw-pop-" + (winter ? "snow-" + winterLabel : "yard-" + y);
+  function seen() { try { return localStorage.getItem(key) === "1"; } catch (e) { return false; } }
+  function remember() { try { localStorage.setItem(key, "1"); } catch (e) {} }
+  if (!winter) {
+    setText("#popEyebrow", "Landscaping " + y);
+    setText("#popTitle", "Landscaping sign-ups are open");
+    setText("#popText", "Lawn mowing, weeding and yard cleanup in our neighbourhood. Free quotes.");
+  } else {
+    setText("#popEyebrow", "Winter " + winterLabel);
+  }
+  function closePop() { pop.classList.remove("show"); remember(); setTimeout(function () { pop.hidden = true; }, 450); }
+  if (pop && !seen() && !/[?&]nopopup/.test(location.search)) {
+    setTimeout(function () {
+      pop.hidden = false;
+      requestAnimationFrame(function () { pop.classList.add("show"); });
+    }, 3500);
+    document.getElementById("popClose").addEventListener("click", closePop);
+    document.getElementById("popCta").addEventListener("click", function () { show(season); closePop(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !pop.hidden) closePop(); });
+  }
+})();

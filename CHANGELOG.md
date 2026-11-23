@@ -2,6 +2,18 @@
 
 # Changelog
 
+## 2026-11-23 · Snow shoveling and landscaping
+
+### Added
+- Snow Shoveling & Landscaping section (`#seasonal`): tabs, service-area map with a 520 m ring around the neighbourhood, and a sign-up / pre-season registration form with a street list.
+- Seasonal pop-up: snow shoveling (November–March) and landscaping (April–October), shown once per visitor per season.
+- Service cards, two seasonal pricing cards (snow from $16 per visit; landscaping free quote) and two FAQ answers.
+- Leaflet 1.9.4 map library in `assets/vendor/leaflet/` (served from the site, no outside script host).
+
+### Changed
+- Menu: added "Snow & Yards"; FAQ moved to the footer menu; compact menu now starts below 1000 px wide so it never overflows.
+- Section backgrounds re-alternated around the new section.
+
 ## 2026-11-20 · Branding and copyright on every file
 
 ### Added

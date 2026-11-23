@@ -30,6 +30,8 @@ Syme Skyworks is a locally owned contracting and drone services company in Canmo
 | Aerial photography and 4K video for real estate, marketing and events | Foundation assistance and power tool work |
 | Flown with a DJI Air 3S, with 2+ years of flight experience | Material runs and on-call help |
 
+**In the neighbourhood (seasonal):** snow shoveling in winter (driveways from $16 per visit, after 2 cm+ snowfalls) and landscaping in summer (mowing, weeding, yard cleanup; free quotes), with sign-up and pre-season registration on the site.
+
 Service area: Canmore, the 3 Sisters area and the Bow Valley.
 
 ## The website
@@ -51,6 +53,7 @@ Service area: Canmore, the 3 Sisters area and the Bow Valley.
 - **Fast:** no frameworks, no build step and no web fonts; photos load lazily from 720 px thumbnails.
 - **Works everywhere:** one column on phones, two on tablets, three on desktops. Respects "reduce motion" and is fully keyboard-accessible.
 - **Gallery viewer:** select any aerial photo to enlarge it.
+- **Seasonal sign-ups:** snow shoveling and landscaping tabs, a service-area map, a sign-up / pre-registration form, and a pop-up that switches with the season.
 - **Contact form** sent through Formspree, plus direct email and phone links.
 - **Ready to share:** page description, share image, favicons, web app manifest, sitemap and a matching "page not found" page.
 
@@ -65,6 +68,7 @@ Service area: Canmore, the 3 Sisters area and the Bow Valley.
 │   ├── style.css           All styling (colour tokens at the top)
 │   ├── site.js             Phone menu, reveal-on-scroll, gallery viewer
 │   ├── icons/              Favicons and app icons
+│   ├── vendor/leaflet/     Map library (Leaflet 1.9.4, BSD-2 licence)
 │   └── img/                Photos, thumb/ (720 px), web patch, share image
 ├── brand/
 │   ├── patch/              Full mission patch (SVG + 1024 px PNG)
