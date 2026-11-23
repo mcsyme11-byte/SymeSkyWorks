@@ -30,9 +30,11 @@ Syme Skyworks is a locally owned contracting and drone services company in Canmo
 | Aerial photography and 4K video for real estate, marketing and events | Foundation assistance and power tool work |
 | Flown with a DJI Air 3S, with 2+ years of flight experience | Material runs and on-call help |
 
-**In the neighbourhood (seasonal):** snow shoveling in winter (driveways from $16 per visit, after 2 cm+ snowfalls) and landscaping in summer (mowing, weeding, yard cleanup; free quotes), with sign-up and pre-season registration on the site.
+**IT support (our specialty):** computer setup, repairs, Wi-Fi and networks, security, backups, printers, software and phones for homes and small businesses in Canmore and Banff.
 
-Service area: Canmore, the 3 Sisters area and the Bow Valley.
+**On Charles Carey (seasonal):** snow shoveling in winter (driveways from $16 per visit, after 2 cm+ snowfalls) and landscaping in summer (mowing, weeding, yard cleanup; free quotes), with sign-up and pre-season registration on the site.
+
+Service areas: IT support in Canmore and Banff; drone and construction work across Canmore; snow shoveling and landscaping on Charles Carey.
 
 ## The website
 

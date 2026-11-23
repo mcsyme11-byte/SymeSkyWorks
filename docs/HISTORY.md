@@ -21,10 +21,11 @@ A mission patch for Syme Skyworks was made in the portfolio project and added to
 - "Est. 2024" corrected to 2023 to match the patch and portfolio.
 - README, design guide, changelog and brand notes added.
 
-## November 23, 2026 · Snow shoveling and landscaping
+## November 23, 2026 · IT support, snow shoveling and landscaping
+- IT support became a headline service (Malcolm's specialty), with its own section, covering Canmore and Banff.
 - New neighbourhood services: snow shoveling (driveways from $16 per visit, after 2 cm+ snowfalls) and landscaping (free quotes).
 - A seasonal pop-up invites sign-ups: shoveling in winter, landscaping in summer.
-- New section with a service-area map (a ring around the neighbourhood), a street list, and a form to sign up or pre-register for next season.
+- New section with a service-area map (a ring around the Charles Carey loop) and a form to sign up or pre-register for next season.
 
 ---
 

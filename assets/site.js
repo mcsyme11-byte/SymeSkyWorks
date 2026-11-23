@@ -116,20 +116,20 @@
   timing.addEventListener("change", syncForm);
   show(season);
 
-  // Service-area map: a ring around the neighbourhood (no pin), loaded when it scrolls into view
+  // Service-area map: a ring around the Charles Carey loop (no pin), loaded when it scrolls into view
   var mapEl = document.getElementById("areaMap");
   var mapMade = false;
   function makeMap() {
     if (mapMade) return; mapMade = true;
-    if (!window.L) { mapEl.innerHTML = '<p style="padding:24px;color:#98A0AB">The map could not load. The service area is Charles Carey, McNeill Dr, Prospect, Morris, Van Horne Ln and Walker Rd in Canmore.</p>'; return; }
-    var centre = [51.0739771, -115.3630219];
+    if (!window.L) { mapEl.innerHTML = '<p style="padding:24px;color:#98A0AB">The map could not load. The service area is Charles Carey in Canmore.</p>'; return; }
+    var centre = [51.07515, -115.36199]; // middle of the Charles Carey loop
     var map = L.map(mapEl, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
-    map.fitBounds(L.latLng(centre).toBounds(1200), { padding: [14, 14] });
+    map.fitBounds(L.latLng(centre).toBounds(560), { padding: [14, 14] });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    L.circle(centre, { radius: 600, color: "#C0A062", weight: 2, dashArray: "6 6", fillColor: "#C0A062", fillOpacity: 0.12, interactive: false }).addTo(map);
+    L.circle(centre, { radius: 200, color: "#C0A062", weight: 2, dashArray: "6 6", fillColor: "#C0A062", fillOpacity: 0.12, interactive: false }).addTo(map);
   }
   if ("IntersectionObserver" in window) {
     var mo = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { makeMap(); mo.disconnect(); } }, { rootMargin: "300px" });
@@ -144,7 +144,7 @@
   if (!winter) {
     setText("#popEyebrow", "Landscaping " + y);
     setText("#popTitle", "Landscaping sign-ups are open");
-    setText("#popText", "Lawn mowing, weeding and yard cleanup in our neighbourhood. Free quotes.");
+    setText("#popText", "Lawn mowing, weeding and yard cleanup on Charles Carey. Free quotes.");
   } else {
     setText("#popEyebrow", "Winter " + winterLabel);
   }
@@ -158,4 +158,17 @@
     document.getElementById("popCta").addEventListener("click", function () { show(season); closePop(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !pop.hidden) closePop(); });
   }
+})();
+
+/* "Get IT Help" and similar links pre-select the service in the contact form. */
+(function () {
+  "use strict";
+  var sel = document.getElementById("contactService");
+  if (!sel) return;
+  document.querySelectorAll("a[data-service]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      var want = a.getAttribute("data-service");
+      for (var i = 0; i < sel.options.length; i++) if (sel.options[i].text === want) { sel.selectedIndex = i; break; }
+    });
+  });
 })();

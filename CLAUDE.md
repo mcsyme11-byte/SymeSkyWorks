@@ -2,14 +2,14 @@
 
 # Instructions for Claude working in this repository
 
-This is the public website of **Syme Skyworks**, Malcolm Syme's drone services and construction support business in Canmore, Alberta. It is published by GitHub Pages from `main` at https://mcsyme11-byte.github.io/SymeSkyWorks/.
+This is the public website of **Syme Skyworks**, Malcolm Syme's IT support, snow shoveling, drone services and construction support business in Canmore, Alberta. It is published by GitHub Pages from `main` at https://mcsyme11-byte.github.io/SymeSkyWorks/.
 
 ## Standing rules
 
 - **This site is public.** No street address, school, age, PC names or file paths. Contact details are limited to: Malcolm Syme, mcsyme11@gmail.com, +1 (403) 679-1495, and the service area (Canmore, the 3 Sisters area and the Bow Valley).
 - **Credit and trademark lines stay on everything** (site footer, README, docs, brand files): "© Malcolm Syme · mcsyme11@gmail.com" and "Syme Skyworks™ and the Syme Skyworks mission patch are trademarks of Malcolm Syme."
 - **Facts:** founded in 2023 (confirmed by Malcolm). DJI Air 3S; 2+ years of flight experience. Snow shoveling: driveways from $16 per visit (depends on driveway and client), after snowfalls of 2 cm or more (depends on client and location), free quotes. Landscaping: free quotes.
-- **Neighbourhood services area:** a 600 m ring on the map, centred on Malcolm's neighbourhood at his request. Never add a pin, marker or street address for his house. Streets: Charles Carey, McNeill Dr, Morris, Prospect Ct, Prospect Heights, Prospect Ln, Prospect Rise, Van Horne Ln, Walker Rd.
+- **Service areas (confirmed by Malcolm):** IT support covers Canmore and Banff (IT is his specialty; feature it with snow shoveling). Drone services and construction support cover all of Canmore. Snow shoveling and landscaping cover Charles Carey only. The map ring (200 m) is centred on the middle of the Charles Carey loop; never add a pin, marker or street address for his house.
 - **Seasonal pop-up:** snow shoveling November–March, landscaping April–October, shown once per visitor per season (add `?nopopup` to a link to suppress it). Only state facts Malcolm has confirmed; never invent clients, reviews or achievements.
 - **Look:** follow `docs/DESIGN.md` (the shared navy, brass and cream "old money" design). Big visual changes start as a preview Malcolm approves.
 - **Logo:** the mission patch is the main logo. Follow `brand/README.md` for which version to use at which size.

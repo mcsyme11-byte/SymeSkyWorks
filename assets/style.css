@@ -255,6 +255,42 @@ footer { background: var(--deep); border-top: 1px solid rgba(192,160,98,.18); pa
   .season-pop p#popText { font-size: 14px; margin: 6px 0 12px; }
 }
 
+/* ── Featured services (IT support and snow shoveling) ── */
+.feature-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.feature { position: relative; display: flex; flex-direction: column; gap: 10px; padding: clamp(28px, 4vw, 44px);
+  background: linear-gradient(160deg, var(--card), var(--deep)); border: 1px solid var(--brass-dim); border-radius: 14px;
+  color: var(--ink); text-decoration: none; transition: transform .25s var(--ease), border-color .25s; }
+.feature:hover { color: var(--ink); transform: translateY(-4px); border-color: var(--brass); }
+.feature .badge { left: auto; right: 26px; }
+.feature h3 { font-size: clamp(30px, 4vw, 40px); line-height: 1.05; }
+.feature p { margin: 0; color: var(--ink2); font-size: 17px; max-width: 460px; }
+.feature-meta { color: var(--muted); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; margin-top: 6px; }
+.feature-go { margin-top: auto; padding-top: 14px; color: var(--brass-bright); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; }
+.icon-lg { width: 64px; height: 64px; margin-bottom: 8px; }
+.icon-lg svg { width: 30px; height: 30px; }
+
+/* ── IT support ── */
+.it-top { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: end; margin-bottom: 40px; }
+.it-top .head { margin-bottom: 0; }
+.it-cta { background: var(--card); border: 1px solid var(--brass); border-radius: var(--r); padding: 26px; }
+.it-cta p { color: var(--ink2); margin: 6px 0 18px; }
+.it-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.it-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 22px 20px; transition: border-color .25s; }
+.it-item:hover { border-color: var(--brass-dim); }
+.it-item .icon { margin-bottom: 14px; }
+.it-item h3 { font-size: 18px; margin-bottom: 6px; }
+.it-item p { margin: 0; color: var(--ink2); font-size: 14.5px; line-height: 1.55; }
+.price.featured.price-sm { padding-top: 30px; }
+@media (max-width: 960px) {
+  .it-grid { grid-template-columns: 1fr 1fr; }
+  .it-top { grid-template-columns: 1fr; align-items: start; }
+}
+@media (max-width: 760px) {
+  .feature-duo { grid-template-columns: 1fr; }
+  .feature .badge { right: 20px; }
+}
+@media (max-width: 420px) { .it-grid { grid-template-columns: 1fr; } }
+
 /* Reveal (opacity and transform only) */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .reveal.in { opacity: 1; transform: none; }
@@ -273,7 +309,7 @@ footer { background: var(--deep); border-top: 1px solid rgba(192,160,98,.18); pa
   .pricing.grid-3 { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; gap: 28px; }
 }
 /* ── Phone ── */
-@media (max-width: 1000px) {
+@media (max-width: 1240px) {
   .nav { position: fixed; top: 64px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gutter) 20px;
     background: var(--bg2); border-bottom: 1px solid var(--line); transform: translateY(-120%); transition: transform .3s var(--ease); visibility: hidden; }
   .nav.open { transform: none; visibility: visible; }
