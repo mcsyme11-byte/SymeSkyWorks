@@ -14,7 +14,8 @@ This is the public website of **Syme Skyworks**, Malcolm Syme's IT support, snow
 - **Look:** follow `docs/DESIGN.md` (the shared navy, brass and cream "old money" design). Big visual changes start as a preview Malcolm approves.
 - **Logo:** the mission patch is the main logo. Follow `brand/README.md` for which version to use at which size.
 - **Performance:** animate only `transform` and `opacity`; no `backdrop-filter`, custom cursors or per-frame scroll handlers.
-- **Caching:** after changing `assets/style.css` or `assets/site.js`, bump the `?v=` version on their links in `index.html`.
+- **Pages are generated.** Edit page content in `src/pages/<name>.html` and the shared header, menu, footer, icons and pop-up in `src/partials/`, then run `python3 tools/build.py` and commit the regenerated root `.html` files. Never edit the root `.html` pages directly (except `404.html`).
+- **Caching:** after changing `assets/style.css` or `assets/site.js`, bump `VERSION` in `tools/build.py` and rebuild.
 - **Contact form** posts to Formspree `https://formspree.io/f/xykokpwd`. Do not change the endpoint unless Malcolm asks.
 - **Record changes** in `CHANGELOG.md`, and major ones in `docs/HISTORY.md`.
 - **Other chats own other repos.** The portfolio (`mcsyme11-byte.github.io`) belongs to the portfolio chat; write a hand-off in `docs/handoffs/` instead of changing it from here.

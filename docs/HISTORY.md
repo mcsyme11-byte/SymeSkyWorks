@@ -27,6 +27,9 @@ A mission patch for Syme Skyworks was made in the portfolio project and added to
 - A seasonal pop-up invites sign-ups: shoveling in winter, landscaping in summer.
 - New section with a service-area map (a ring around the Charles Carey loop) and a form to sign up or pre-register for next season.
 
+## November 23, 2026 · Multi-page site goes live
+- The website became a multi-page site with a dropdown menu, and went live with IT support, snow shoveling and landscaping, the Charles Carey map, the seasonal pop-up, and the Privacy Policy and Terms of Service.
+
 ---
 
 <p align="center">

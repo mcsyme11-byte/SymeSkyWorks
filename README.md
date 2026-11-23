@@ -61,44 +61,47 @@ Service areas: IT support in Canmore and Banff; drone and construction work acro
 
 **Sections:** Services · Drone Services · Construction Support · Gallery · Pricing · About & Equipment · FAQ · Contact
 
+## Pages
+
+| Page | What's on it |
+|---|---|
+| `index.html` | Home: hero, IT Support and Snow Shoveling feature cards, all services, photo preview |
+| `it.html` | IT Support (our specialty), about $35 per hour, Canmore and Banff |
+| `snow.html` | Snow shoveling and landscaping on Charles Carey: map, sign-up and pre-season form |
+| `drone.html`, `construction.html` | Drone services and construction support |
+| `gallery.html` | Aerial photo gallery with viewer |
+| `pricing.html`, `about.html`, `faq.html`, `contact.html` | Rates, company, questions, contact form |
+| `privacy.html`, `terms.html` | Privacy Policy (Alberta PIPA) and Terms of Service |
+
 ## Repository layout
 
 ```
-├── index.html              The website (one page)
+├── src/
+│   ├── pages/              Content of each page (edit these)
+│   └── partials/           Shared header + menu, footer, icons, seasonal pop-up
+├── tools/build.py          Builds the pages from src/ (python3 tools/build.py)
+├── *.html                  Generated pages served by GitHub Pages (don't edit directly)
 ├── 404.html                "Page not found" page
 ├── assets/
 │   ├── style.css           All styling (colour tokens at the top)
-│   ├── site.js             Phone menu, reveal-on-scroll, gallery viewer
-│   ├── icons/              Favicons and app icons
+│   ├── site.js             Menu, dropdown, reveal, gallery viewer, seasonal tabs/map/form, pop-up
 │   ├── vendor/leaflet/     Map library (Leaflet 1.9.4, BSD-2 licence)
+│   ├── icons/              Favicons and app icons
 │   └── img/                Photos, thumb/ (720 px), web patch, share image
-├── brand/
-│   ├── patch/              Full mission patch (SVG + 1024 px PNG)
-│   ├── mark/               Simplified marks for small sizes
-│   └── README.md           Logo usage rules
-├── docs/
-│   ├── DESIGN.md           Design guide: colours, type, layout, logo placement
-│   ├── HISTORY.md          How the business and site got here
-│   ├── screenshots/        Images used in this README
-│   └── handoffs/           Notes for other project chats
-├── site.webmanifest        Name, colours and icons for "Add to Home Screen"
-├── robots.txt, sitemap.xml For search engines
-├── CHANGELOG.md            Dated list of changes
+├── brand/                  Logo: mission patch, marks, social preview ([brand/README.md](brand/README.md))
+├── docs/                   Design guide, history, screenshots, hand-offs
+├── site.webmanifest, robots.txt, sitemap.xml
+├── CHANGELOG.md
 └── LICENSE                 Copyright notice (all rights reserved)
 ```
 
 ## Updating the site
 
-Everything is plain HTML, CSS and JavaScript. Edit, commit to `main`, and GitHub Pages publishes it within a minute or two.
+1. Edit the page in `src/pages/` (or the shared menu/footer in `src/partials/`).
+2. Run `python3 tools/build.py`.
+3. Commit everything to `main`; GitHub Pages publishes within a minute or two.
 
-| To change | Edit |
-|---|---|
-| Services, prices, FAQ, contact details | Text in `index.html` (each section is labelled by its `id`, e.g. `id="pricing"`) |
-| Colours, spacing, fonts | The tokens at the top of `assets/style.css` |
-| Add a gallery photo | Put the full photo in `assets/img/` and a 720 px copy in `assets/img/thumb/`, then copy one `<figure class="shot">` block in the gallery |
-| The logo | See [`brand/README.md`](brand/README.md) |
-
-After changing `style.css` or `site.js`, bump the `?v=` number on their links at the top and bottom of `index.html` (for example `?v=20261117a` → `?v=20261118a`) so visitors get the new version instead of an old cached copy. Record notable changes in [`CHANGELOG.md`](CHANGELOG.md).
+After changing `assets/style.css` or `assets/site.js`, bump `VERSION` in `tools/build.py` before building so visitors get the new files. Record notable changes in [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Brand
 

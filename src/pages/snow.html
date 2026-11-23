@@ -1,0 +1,116 @@
+<!--{"title": "Snow Shoveling & Landscaping", "description": "Snow shoveling (from $16 per visit) and landscaping on Charles Carey in Canmore. Sign up for this season or pre-register for the next.", "active": "snow", "leaflet": true}-->
+<section id="seasonal">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">On Charles Carey</p>
+      <h1>Snow Shoveling &amp; Landscaping</h1>
+      <p class="lede">Seasonal help for homes on Charles Carey in Canmore: shoveling in the winter, yard work in the summer. Sign up for this season or pre-register for the next one.</p>
+      <hr class="rule">
+    </div>
+
+    <div class="tabs reveal" role="tablist" aria-label="Seasonal services">
+      <button type="button" role="tab" id="tab-snow" aria-controls="panel-snow" aria-selected="true">Snow Shoveling</button>
+      <button type="button" role="tab" id="tab-yard" aria-controls="panel-yard" aria-selected="false">Landscaping</button>
+    </div>
+
+    <div class="split season-split">
+      <div class="reveal">
+        <div class="season-panel" role="tabpanel" id="panel-snow" aria-labelledby="tab-snow">
+          <p class="season-price"><small>From</small> $16 <small>/ visit</small></p>
+          <p>Driveways, walkways and steps cleared after every snowfall of 2&nbsp;cm or more. Timing and price depend on the driveway, the client and the location, and quotes are always free.</p>
+          <ul class="ticks ticks-1">
+            <li><b>Driveways</b><span>Cleared edge to edge, from $16 per visit.</span></li>
+            <li><b>Walkways &amp; steps</b><span>Added to any visit on request.</span></li>
+            <li><b>After 2 cm+</b><span>Every snowfall, on call, or one-time.</span></li>
+            <li><b>Pre-season sign-up</b><span><span class="js-snow-preseason">Reserve your spot before the snow starts.</span></span></li>
+          </ul>
+        </div>
+        <div class="season-panel" role="tabpanel" id="panel-yard" aria-labelledby="tab-yard" hidden>
+          <p class="season-price">Free quotes</p>
+          <p>Lawn mowing, weeding and yard cleanup for homes on Charles Carey, from spring to fall. Every yard is different, so pricing is quoted per property.</p>
+          <ul class="ticks ticks-1">
+            <li><b>Lawn mowing</b><span>Regular visits through the season.</span></li>
+            <li><b>Weeding</b><span>Beds, edges and walkways.</span></li>
+            <li><b>Yard cleanup</b><span>Spring and fall tidy-ups.</span></li>
+            <li><b>Pre-season sign-up</b><span><span class="js-yard-preseason">Pre-register now and you are first on the list when the season opens.</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <figure class="area reveal">
+        <div id="areaMap" class="area-map" role="img" aria-label="Map of the service area, a ring around the Charles Carey loop in Canmore"></div>
+        <figcaption>Service area: homes on Charles Carey, Canmore. IT support, drone and construction work cover all of Canmore, and IT support also covers Banff.</figcaption>
+      </figure>
+    </div>
+
+    <form class="season-form reveal" id="seasonForm" action="https://formspree.io/f/xykokpwd" method="POST">
+      <input type="hidden" name="_subject" id="seasonSubject" value="Charles Carey sign-up from Syme Skyworks website">
+      <input type="hidden" name="form" value="Snow shoveling and landscaping sign-up">
+      <h3>Sign up or pre-register</h3>
+      <div class="row">
+        <label>Service
+          <select name="service" id="seasonService">
+            <option value="Snow shoveling">Snow shoveling</option>
+            <option value="Landscaping">Landscaping</option>
+            <option value="Both">Both</option>
+          </select>
+        </label>
+        <label>Timing
+          <select name="timing" id="seasonTiming">
+            <option value="Start this season">Start this season</option>
+            <option value="Pre-register for next season">Pre-register for next season</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label>Name<input type="text" name="name" autocomplete="name" required></label>
+        <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+      </div>
+      <label>Email<input type="email" name="_replyto" autocomplete="email" placeholder="you@example.com" required></label>
+      <div class="row row-addr">
+        <label>House number<input type="text" name="house_number" inputmode="numeric" autocomplete="off" required></label>
+        <label>Street
+          <select name="street" required>
+            <option selected>Charles Carey</option>
+          </select>
+        </label>
+      </div>
+      <fieldset class="checks" data-for="snow">
+        <legend>What to clear</legend>
+        <label><input type="checkbox" name="snow_areas" value="Driveway" checked> Driveway</label>
+        <label><input type="checkbox" name="snow_areas" value="Walkway"> Walkway</label>
+        <label><input type="checkbox" name="snow_areas" value="Steps"> Steps</label>
+      </fieldset>
+      <label data-for="snow">How often
+        <select name="snow_frequency">
+          <option>After every snowfall of 2 cm or more</option>
+          <option>On call (I will ask each time)</option>
+          <option>One-time</option>
+        </select>
+      </label>
+      <fieldset class="checks" data-for="yard">
+        <legend>Yard work</legend>
+        <label><input type="checkbox" name="yard_work" value="Lawn mowing" checked> Lawn mowing</label>
+        <label><input type="checkbox" name="yard_work" value="Weeding"> Weeding</label>
+        <label><input type="checkbox" name="yard_work" value="Yard cleanup"> Yard cleanup</label>
+      </fieldset>
+      <label>Notes<textarea name="notes" placeholder="Anything we should know: driveway size, gate codes, best time, or a street not listed."></textarea></label>
+      <button type="submit" class="btn block">Send Sign-up</button>
+      <p class="form-note">Free quotes. You will receive a reply to confirm your price and schedule. By sending, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+    </form>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Common questions</p>
+      <h2>Questions</h2>
+      <hr class="rule">
+    </div>
+    <div class="faq reveal">
+      <details><summary>Where do you offer snow shoveling and landscaping?</summary><p>On Charles Carey in Canmore. IT support, drone services and construction support cover the rest of Canmore, and IT support also covers Banff.</p></details>
+      <details><summary>When do you come out to shovel?</summary><p>After snowfalls of about 2&nbsp;cm or more. Exact timing depends on the client and the location, and is confirmed when you sign up. Driveways start at $16 per visit, and quotes are free.</p></details>
+    </div>
+    <p class="more-link reveal"><a href="faq.html">All questions →</a></p>
+  </div>
+</section>

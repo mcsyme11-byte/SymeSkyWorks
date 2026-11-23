@@ -2,6 +2,16 @@
 
 # Changelog
 
+## 2026-11-23 · Multi-page site
+
+### Changed
+- The single long page is now separate pages: Home, IT Support, Snow & Yards, Drone, Construction, Gallery, Pricing, About, FAQ and Contact, plus Privacy and Terms.
+- New menu with a "More Services" dropdown and current-page highlight; three-column footer menu.
+- Pages are generated from `src/` by `tools/build.py` (shared header, footer, icons and pop-up).
+- Home shows the IT Support and Snow Shoveling feature cards, all services and a six-photo preview linking to the gallery.
+- Service pages end with a call to action that opens the contact form with the service pre-selected.
+- Sitemap lists every page.
+
 ## 2026-11-23 · IT support, snow shoveling and landscaping
 
 ### Added
