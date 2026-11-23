@@ -156,6 +156,14 @@
     }
   }
 
+  /* ── Back buttons: return to the previous page on this site, otherwise go home ── */
+  document.querySelectorAll("[data-back]").forEach(function (b) {
+    b.addEventListener("click", function (e) {
+      var ref = document.referrer;
+      if (ref && ref.indexOf(location.origin) === 0 && ref !== location.href && history.length > 1) { e.preventDefault(); history.back(); }
+    });
+  });
+
   /* ── Contact page: pre-select the service from links such as contact.html?service=IT%20support ── */
   var sel = $("contactService");
   if (sel) {

@@ -2,6 +2,14 @@
 
 # Changelog
 
+## 2026-11-23 · Menu alignment and Back buttons
+
+### Fixed
+- Desktop menu: "More Services" sat lower than the other items (different line height). Every menu item now uses the same box, so all text lines up; spacing tightened slightly.
+
+### Added
+- Back buttons at the top and bottom of the Privacy Policy and Terms of Service. They return to the previous page on the site, or to the home page if there isn't one.
+
 ## 2026-11-23 · Multi-page site
 
 ### Changed

@@ -12,7 +12,7 @@ Bump VERSION after changing assets/style.css or assets/site.js.
 """
 import json, re, pathlib
 
-VERSION = "20261123g"
+VERSION = "20261123h"
 BASE = "https://mcsyme11-byte.github.io/SymeSkyWorks/"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"

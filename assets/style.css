@@ -310,6 +310,26 @@ footer { background: var(--deep); border-top: 1px solid rgba(192,160,98,.18); pa
 .nav .nav-menu a::after { display: none; }
 .nav .nav-menu a:hover, .nav .nav-menu a[aria-current="page"] { background: var(--card); color: var(--brass-bright); }
 
+/* Desktop menu: every item gets the same box so the text lines up exactly */
+@media (min-width: 1241px) {
+  .nav { gap: 28px; }
+  .nav > a, .nav-drop-btn { display: inline-flex; align-items: center; height: 36px; padding: 0;
+    font-family: var(--font); font-size: 12px; line-height: 1; letter-spacing: .15em; }
+  .nav > a::after { bottom: 7px; }
+  .nav-drop-btn { gap: 9px; }
+  .caret { width: 6px; height: 6px; transform: translateY(-2px) rotate(45deg); }
+  .nav-drop.open .caret { transform: translateY(1px) rotate(-135deg); }
+  .nav > a.nav-cta { padding: 0 20px; margin-left: 4px; }
+}
+
+/* Back button (legal pages) */
+.back-link { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 28px; padding: 9px 16px 9px 12px;
+  border: 1px solid var(--line2); border-radius: 999px; color: var(--ink2); text-decoration: none;
+  font-size: 12px; letter-spacing: .16em; text-transform: uppercase; transition: color .2s, border-color .2s; }
+.back-link:hover { color: var(--brass-bright); border-color: var(--brass-dim); }
+.back-link .arrow { width: 7px; height: 7px; border-left: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); }
+.legal-back-bottom { margin: 40px 0 0; }
+
 /* Call-to-action bands, "more" links, footer columns */
 .cta-band p:first-child { font-size: clamp(22px, 3vw, 30px); letter-spacing: .02em; color: var(--ink); }
 .cta-band p + p { margin-top: 22px; font-style: normal; }
