@@ -212,6 +212,8 @@ footer { background: var(--deep); border-top: 1px solid rgba(192,160,98,.18); pa
 .area { margin: 0; }
 .area-map { width: 100%; aspect-ratio: 4 / 3; border-radius: var(--r); border: 1px solid var(--line2); background: var(--deep); overflow: hidden; }
 .area figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; }
+/* OpenStreetMap tiles, dimmed to match the navy site (static filter, no animation) */
+.area-map .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.95) contrast(.85) saturate(.5); }
 .area-map .leaflet-control-attribution { background: rgba(12,17,25,.8); color: var(--muted); font-family: var(--font); }
 .area-map .leaflet-control-attribution a { color: var(--ink2); }
 .area-map .leaflet-bar a { background: var(--card); color: var(--ink); border-color: var(--line2); }
