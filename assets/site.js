@@ -122,14 +122,14 @@
   function makeMap() {
     if (mapMade) return; mapMade = true;
     if (!window.L) { mapEl.innerHTML = '<p style="padding:24px;color:#98A0AB">The map could not load. The service area is Charles Carey in Canmore.</p>'; return; }
-    var centre = [51.07515, -115.36199]; // middle of the Charles Carey loop
+    var centre = [51.07499, -115.36274]; // middle of the Charles Carey loop
     var map = L.map(mapEl, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
     map.fitBounds(L.latLng(centre).toBounds(560), { padding: [14, 14] });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    L.circle(centre, { radius: 200, color: "#C0A062", weight: 2, dashArray: "6 6", fillColor: "#C0A062", fillOpacity: 0.12, interactive: false }).addTo(map);
+    L.circle(centre, { radius: 210, color: "#C0A062", weight: 2, dashArray: "6 6", fillColor: "#C0A062", fillOpacity: 0.12, interactive: false }).addTo(map);
   }
   if ("IntersectionObserver" in window) {
     var mo = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { makeMap(); mo.disconnect(); } }, { rootMargin: "300px" });

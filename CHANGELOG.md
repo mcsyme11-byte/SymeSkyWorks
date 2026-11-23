@@ -5,7 +5,7 @@
 ## 2026-11-23 · IT support, snow shoveling and landscaping
 
 ### Added
-- Snow Shoveling & Landscaping section (`#seasonal`): tabs, service-area map with a 200 m ring around the Charles Carey loop, and a sign-up / pre-season registration form.
+- Snow Shoveling & Landscaping section (`#seasonal`): tabs, service-area map with a 210 m ring around the Charles Carey loop, and a sign-up / pre-season registration form.
 - Seasonal pop-up: snow shoveling (November–March) and landscaping (April–October), shown once per visitor per season.
 - Service cards, two seasonal pricing cards (snow from $16 per visit; landscaping free quote) and two FAQ answers.
 - Leaflet 1.9.4 map library in `assets/vendor/leaflet/` (served from the site, no outside script host); OpenStreetMap tiles, dimmed to match the site.
@@ -16,7 +16,7 @@
 ### Changed
 - Hero now leads with IT Support and Snow Shoveling; facts strip updated; drone and construction stay in Services.
 - Service areas: IT support in Canmore and Banff; drone and construction across Canmore; snow shoveling and landscaping on Charles Carey.
-- Menu: added "IT Support" and "Snow & Yards"; Services; FAQ moved to the footer menu; compact menu now starts below 1240 px wide so it never overflows.
+- Menu: added "IT Support" and "Snow & Yards"; Services and FAQ moved to the footer menu; compact menu now starts below 1240 px wide so it never overflows.
 - Section backgrounds re-alternated around the new section.
 
 ## 2026-11-20 · Branding and copyright on every file
