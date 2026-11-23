@@ -225,6 +225,9 @@ footer { background: var(--deep); border-top: 1px solid rgba(192,160,98,.18); pa
 .checks label { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; letter-spacing: normal; text-transform: none; color: var(--ink); cursor: pointer; }
 .checks input { width: 18px; height: 18px; accent-color: var(--brass); }
 .form-note { margin: 0; text-align: center; color: var(--muted); font-size: 14px; }
+.form-note a { color: var(--ink2); }
+.nav-legal { gap: 22px; }
+@media (max-width: 1240px) { .nav.nav-legal { position: static; flex-direction: row; transform: none; visibility: visible; padding: 0; background: none; border: 0; } .nav.nav-legal a { border: 0; padding: 4px 0; } .nav.nav-legal a.nav-cta { margin: 0; padding: 7px 16px; border: 1px solid var(--brass-dim); } }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .pricing-season { margin-top: 18px; }
 .price-sm { padding: 24px 26px; }

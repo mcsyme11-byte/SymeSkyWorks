@@ -11,6 +11,8 @@
 - Leaflet 1.9.4 map library in `assets/vendor/leaflet/` (served from the site, no outside script host); OpenStreetMap tiles, dimmed to match the site.
 
 - **IT Support** section (`#it`): our specialty, eight service tiles, free quotes, "Get IT Help" buttons that pre-select IT support in the contact form; IT card in Services and Pricing; IT FAQ.
+- `privacy.html` (Privacy Policy, Alberta PIPA) and `terms.html` (Terms of Service), linked from the footer and under both forms.
+- IT support pricing: about $35 per hour average for most jobs.
 - "What we do best" feature cards for IT Support and Snow Shoveling right under the hero.
 
 ### Changed
