@@ -56,7 +56,7 @@ Blue (`#2E86C1`) from the old site is retired.
 ## Seasonal services
 
 - **Tabs** (pill style, brass when selected) switch between Snow Shoveling and Landscaping.
-- **Map:** Leaflet with OpenStreetMap tiles, dimmed with a CSS filter to match the navy palette (CARTO's free tiles now need a paid key). The service area is a dashed brass ring (520 m) with a light brass fill. No pin or address on the owner's house. The map loads only when scrolled into view and doesn't zoom on scroll.
+- **Map:** Leaflet with OpenStreetMap tiles, dimmed with a CSS filter to match the navy palette (CARTO's free tiles now need a paid key). The service area is a dashed brass ring (600 m) with a light brass fill. No pin or address on the owner's house. The map loads only when scrolled into view and doesn't zoom on scroll.
 - **Pop-up:** a card in the bottom corner (bottom sheet on phones), not a page-blocking modal. It appears 3.5 s after load, once per visitor per season, and closes with ×, Esc or its button.
 - **Form:** posts to the same Formspree endpoint; fields for the other service hide automatically.
 

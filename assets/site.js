@@ -124,12 +124,12 @@
     if (!window.L) { mapEl.innerHTML = '<p style="padding:24px;color:#98A0AB">The map could not load. The service area is Charles Carey, McNeill Dr, Prospect, Morris, Van Horne Ln and Walker Rd in Canmore.</p>'; return; }
     var centre = [51.0739771, -115.3630219];
     var map = L.map(mapEl, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
-    map.fitBounds(L.latLng(centre).toBounds(1040), { padding: [14, 14] });
+    map.fitBounds(L.latLng(centre).toBounds(1200), { padding: [14, 14] });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    L.circle(centre, { radius: 520, color: "#C0A062", weight: 2, dashArray: "6 6", fillColor: "#C0A062", fillOpacity: 0.12, interactive: false }).addTo(map);
+    L.circle(centre, { radius: 600, color: "#C0A062", weight: 2, dashArray: "6 6", fillColor: "#C0A062", fillOpacity: 0.12, interactive: false }).addTo(map);
   }
   if ("IntersectionObserver" in window) {
     var mo = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { makeMap(); mo.disconnect(); } }, { rootMargin: "300px" });
